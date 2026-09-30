@@ -1,0 +1,25 @@
+node_modules
+.next
+out
+.env*
+.sites-runtime
+*.tsbuildinfo
+test-results
+playwright-report
+
+dist
+.wrangler
+.dev.vars*
+
+# Local credentials, runtime state and generated artifacts
+.openai/
+.vinext/
+.sites/
+.DS_Store
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+*.log
+.pages-build-route.ts

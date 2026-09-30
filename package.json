@@ -1,0 +1,42 @@
+{
+  "name": "yanshi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vinext dev --port 5173",
+    "build": "vinext build",
+    "build:pages": "node scripts/build-pages.mjs",
+    "deploy:pages": "wrangler pages deploy out",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "start": "wrangler dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --inspector-port 0"
+  },
+  "dependencies": {
+    "next": "^16.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.468.0",
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "tsx": "^4.19.0",
+    "@playwright/test": "^1.51.0",
+    "vinext": "1.0.0-beta.5",
+    "vite": "8.0.13",
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
+    "wrangler": "4.92.0",
+    "@vitejs/plugin-rsc": "0.5.26"
+  },
+  "type": "module"
+}
